@@ -1,7 +1,8 @@
-package com.ddvader44.gorun
+package com.ddvader44.gorun.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.ddvader44.gorun.R
 import com.ddvader44.gorun.db.RunDAO
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
