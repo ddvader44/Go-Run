@@ -23,6 +23,7 @@
             android:textColor="@color/white"
             android:text="00:00:00:00"
             android:textSize="50sp"
+            android:textAppearance="@style/TextStyle"
             app:layout_constraintBottom_toTopOf="@+id/btnToggleRun"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
@@ -38,7 +39,8 @@
             app:layout_constraintEnd_toStartOf="@+id/btnFinishRun"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvTimer" />
+            app:layout_constraintTop_toBottomOf="@+id/tvTimer"
+            android:textAppearance="@style/TextStyle"/>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnFinishRun"
@@ -46,6 +48,7 @@
             android:layout_height="wrap_content"
             android:text="Finish Run"
             android:visibility="gone"
+            android:textAppearance="@style/TextStyle"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
@@ -62,6 +65,7 @@
         android:text="Let's go, USERNAME!"
         android:textAlignment="center"
         android:textSize="50sp"
+        android:textAppearance="@style/TextStyle"
         android:visibility="gone"
         app:layout_constraintBottom_toTopOf="@+id/clInnerLayout"
         app:layout_constraintEnd_toEndOf="parent"

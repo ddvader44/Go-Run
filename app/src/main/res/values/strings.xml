@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">Go Run!</string>
+    <string-array name="filter_options">
+        <item>Date</item>
+        <item>Running Time</item>
+        <item>Distance</item>
+        <item>Average Speed</item>
+        <item>Calories Burned</item>
+    </string-array>
     <string name="google_maps_key">AIzaSyBSv4RxUpIBtUUew5F5Pa8H7rknkDw3cpY</string>
 </resources>
