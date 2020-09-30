@@ -68,4 +68,5 @@ class TrackingFragment : Fragment(R.layout.fragment_tracking){
         super.onSaveInstanceState(outState)
         mapView?.onSaveInstanceState(outState)
     }
+
 }
