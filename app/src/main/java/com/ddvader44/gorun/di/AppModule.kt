@@ -1,9 +1,15 @@
 package com.ddvader44.gorun.di
 
 import android.content.Context
+import android.content.Context.MODE_PRIVATE
+import android.content.SharedPreferences
 import androidx.room.Room
 import com.ddvader44.gorun.db.RunningDatabase
+import com.ddvader44.gorun.extras.Constants.KEY_FIRST_TIME_TOGGLE
+import com.ddvader44.gorun.extras.Constants.KEY_NAME
+import com.ddvader44.gorun.extras.Constants.KEY_WEIGHT
 import com.ddvader44.gorun.extras.Constants.RUNNING_DATABASE_NAME
+import com.ddvader44.gorun.extras.Constants.SHARED_PREFERENCES_NAME
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -29,4 +35,21 @@ object AppModule {
     @Provides
     fun provideRunDao(db: RunningDatabase) = db.getRunDao()
 
+
+    @Singleton
+    @Provides
+    fun provideSharedPreferences(@ApplicationContext app: Context) =
+        app.getSharedPreferences(SHARED_PREFERENCES_NAME,MODE_PRIVATE)
+
+    @Singleton
+    @Provides
+    fun provideName(sharedPref: SharedPreferences) = sharedPref.getString(KEY_NAME,"") ?: ""
+
+    @Singleton
+    @Provides
+    fun provideWeight(sharedPref: SharedPreferences) = sharedPref.getFloat(KEY_WEIGHT,80f)
+
+    @Singleton
+    @Provides
+    fun provideBoolean(sharedPref: SharedPreferences) = sharedPref.getBoolean(KEY_FIRST_TIME_TOGGLE,true)
 }

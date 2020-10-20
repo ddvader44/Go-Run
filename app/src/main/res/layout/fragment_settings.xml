@@ -4,32 +4,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
-    android:background="@color/colorPrimaryDark">
+    android:background="@color/colorPrimaryDark"
+    android:padding="16dp">
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tilName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/tilWeight"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:textColorHint="@color/white"
-        android:textColor="@color/white"
-        >
+        app:layout_constraintStart_toStartOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/md_blue_900"
             android:ems="10"
-            android:hint="Your Name"
             android:gravity="center"
-            android:textColorHint="@color/white"
-            android:textColor="@color/white"
+            android:hint="Your Name"
             android:inputType="textPersonName"
-            android:background="@color/md_blue_900"/>
+            android:textColor="@color/white"
+            android:textColorHint="@color/white" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -37,23 +36,23 @@
         android:id="@+id/tilWeight"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/guideline3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline3"
-        android:textColorHint="@color/white"
-        android:textColor="@color/white">
+        app:layout_constraintTop_toTopOf="@+id/guideline3">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etWeight"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/md_blue_900"
             android:ems="10"
-            android:hint="Your Weight"
             android:gravity="center"
-            android:inputType="numberDecimal"
-            android:background="@color/md_blue_900"/>
+            android:hint="Your Weight"
+            android:inputType="numberDecimal" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -65,21 +64,8 @@
         android:text="Apply Changes"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tilWeight"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/tilWeight" />
 
-    <TextView
-        android:layout_width="399dp"
-        android:layout_height="38dp"
-        android:layout_marginStart="9dp"
-        android:layout_marginBottom="31dp"
-        android:text="App made by ddvader44"
-        android:textSize="16sp"
-        android:gravity="center"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline3"
@@ -87,5 +73,29 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.5" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="72dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="171dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnApplyChanges"
+        app:srcCompat="@mipmap/ic_launcher_foreground" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="130dp"
+        android:layout_height="27dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/product"
+        android:text="Made by ddvader44"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
